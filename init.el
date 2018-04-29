@@ -48,6 +48,8 @@
 (when (version< emacs-version "24.4")
   (error "Prelude requires at least GNU Emacs 24.4, but you're running %s" emacs-version))
 
+(eval-when-compile (require 'subr-x))
+
 ;; Always load newest byte code
 (setq load-prefer-newer t)
 
@@ -121,17 +123,25 @@ by Prelude.")
 
 ;; the modules
 (if (file-exists-p prelude-modules-file)
-    (load prelude-modules-file)
+    ;; (load prelude-modules-file)
+    (load (string-remove-suffix ".el" prelude-modules-file))
   (message "Missing modules file %s" prelude-modules-file)
   (message "You can get started by copying the bundled example file from sample/prelude-modules.el"))
 
 ;; config changes made through the customize UI will be stored here
+;; (setq custom-file (expand-file-name "custom.elc" prelude-personal-dir))
 (setq custom-file (expand-file-name "custom.el" prelude-personal-dir))
 
 ;; load the personal settings (this includes `custom-file')
 (when (file-exists-p prelude-personal-dir)
   (message "Loading personal configuration files in %s..." prelude-personal-dir)
-  (mapc 'load (directory-files prelude-personal-dir 't "^[^#\.].*el$")))
+  (mapc 'load
+        (mapcar (lambda (x) (string-remove-suffix ".el" x))
+                (directory-files prelude-personal-dir 't "^[^#\.].*el$")
+        )
+  )
+  ;; (mapc 'load (directory-files prelude-personal-dir 't "^[^#\.].*el$"))
+  )
 
 (message "Prelude is ready to do thy bidding, Master %s!" current-user)
 
