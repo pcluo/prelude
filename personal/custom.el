@@ -3,7 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(blink-cursor-mode t)
+ '(blink-cursor-mode nil)
  '(column-number-mode t)
  '(company-idle-delay 0.5)
  '(company-minimum-prefix-length 3)
@@ -25,7 +25,7 @@
  '(menu-bar-mode t)
  '(package-selected-packages
    (quote
-    (cyberpunk-theme rainbow-mode elisp-slime-nav rainbow-delimiters zop-to-char zenburn-theme which-key web-mode volatile-highlights utop tuareg smex smartrep smartparens smart-mode-line pydoc ov operate-on-number multiple-cursors move-text merlin markdown-mode magit key-chord imenu-anywhere iedit ido-completing-read+ helm-pydoc helm-projectile helm-describe-modes guru-mode grizzl god-mode go-projectile gitignore-mode gitconfig-mode git-timemachine gist flycheck flx-ido expand-region exec-path-from-shell evil-visualstar evil-surround ess elpy ein editorconfig easy-kill discover-my-major diminish diff-hl crux counsel browse-kill-ring beacon anzu ag ace-window)))
+    (cyberpunk-theme rainbow-mode elisp-slime-nav rainbow-delimiters zop-to-char zenburn-theme which-key web-mode volatile-highlights utop tuareg smex smartrep smartparens smart-mode-line pydoc ov operate-on-number multiple-cursors move-text merlin markdown-mode magit key-chord imenu-anywhere iedit ido-completing-read+ helm-projectile helm-describe-modes guru-mode grizzl god-mode go-projectile gitignore-mode gitconfig-mode git-timemachine gist flycheck flx-ido expand-region exec-path-from-shell evil-visualstar evil-surround ess elpy ein editorconfig easy-kill discover-my-major diminish diff-hl crux counsel browse-kill-ring beacon anzu ag ace-window)))
  '(prelude-flyspell nil)
  '(prelude-global-mode t)
  '(prelude-guru nil)
