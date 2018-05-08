@@ -35,6 +35,7 @@
  '(python-shell-interpreter "jupyter")
  '(python-shell-interpreter-args "console --simple-prompt")
  '(python-shell-prompt-detect-failure-warning nil)
+ '(scroll-bar-mode nil)
  '(text-scale-mode-step 1.1)
  '(user-full-name "Patrick Luo")
  '(user-mail-address "cluoren@gmail.com")
